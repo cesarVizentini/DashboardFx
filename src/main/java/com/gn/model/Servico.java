@@ -13,7 +13,9 @@ public class Servico implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID", nullable = false)
-    private int ID;
+    private Long ID;
+    @Column(name = "descricao", nullable = false)
+    private String descricao;
     @Column(name = "data", nullable = false)
     private String data;
     @Column(name = "hora", nullable = false)
@@ -21,18 +23,26 @@ public class Servico implements Serializable {
     @Column(name = "funcionario", nullable = false)
     private String funcionario;
     @Column(name = "preco", nullable = false)
-    private double preco;
+    private Double preco;
     @Column(name = "custo", nullable = false)
-    private double custo;
+    private Double custo;
 
     public Servico() { }
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public String getData() {
@@ -59,19 +69,19 @@ public class Servico implements Serializable {
         this.funcionario = funcionario;
     }
 
-    public double getPreco() {
+    public Double getPreco() {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 
-    public double getCusto() {
+    public Double getCusto() {
         return custo;
     }
 
-    public void setCusto(double custo) {
+    public void setCusto(Double custo) {
         this.custo = custo;
     }
 }

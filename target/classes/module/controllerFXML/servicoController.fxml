@@ -23,12 +23,13 @@
       </HBox>
       <AnchorPane fx:id="tfid" layoutX="26.0" layoutY="50.0" prefHeight="120.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <children>
-            <JFXTextField disable="true" editable="false" labelFloat="true" layoutX="39.0" layoutY="24.0" promptText="id" AnchorPane.leftAnchor="20.0" />
-            <JFXTextField fx:id="tfFuncionario" labelFloat="true" layoutX="39.0" layoutY="69.0" text="Funcionario" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="69.0" />
-            <JFXTextField fx:id="tfPreco" labelFloat="true" layoutX="175.0" layoutY="69.0" text="Preco" />
-            <JFXTextField fx:id="tfHora" labelFloat="true" layoutX="331.0" layoutY="24.0" text="Hora" />
-            <JFXTextField fx:id="tfData" labelFloat="true" layoutX="175.0" layoutY="24.0" text="data" />
-            <JFXTextField fx:id="tfCusto" labelFloat="true" layoutX="331.0" layoutY="69.0" text="Custo" />
+            <JFXTextField fx:id="tfID" disable="true" editable="false" labelFloat="true" layoutX="39.0" layoutY="24.0" promptText="id" AnchorPane.leftAnchor="20.0" />
+            <JFXTextField fx:id="tfFuncionario" labelFloat="true" layoutX="165.0" layoutY="69.0" text="Funcionario" AnchorPane.leftAnchor="165.0" AnchorPane.topAnchor="69.0" />
+            <JFXTextField fx:id="tfPreco" labelFloat="true" layoutX="310.0" layoutY="69.0" text="Preco" />
+            <JFXTextField fx:id="tfHora" labelFloat="true" layoutX="445.0" layoutY="24.0" text="Hora" />
+            <JFXTextField fx:id="tfData" labelFloat="true" layoutX="20.0" layoutY="69.0" text="data" AnchorPane.leftAnchor="20.0" />
+            <JFXTextField fx:id="tfCusto" labelFloat="true" layoutX="465.0" layoutY="69.0" text="Custo" AnchorPane.rightAnchor="0.0" />
+            <JFXTextField fx:id="tfDescricao" labelFloat="true" layoutX="233.0" layoutY="24.0" text="Descricao" />
          </children></AnchorPane>
       <AnchorPane layoutX="269.0" layoutY="179.0" prefHeight="335.0" prefWidth="600.0" style="-fx-background-color: #008b8b; -fx-border-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="170.0">
          <children>
@@ -47,8 +48,8 @@
                   </Button>
                </children>
             </HBox>
-            <TextField fx:id="tfPesquisa" layoutX="12.0" layoutY="88.0" onAction="#pesquisar" prefHeight="9.0" prefWidth="578.0" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0" />
-            <TableView fx:id="tableView" layoutX="31.0" layoutY="128.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="130.0" />
+            <TextField fx:id="tfPesquisa" layoutX="12.0" layoutY="88.0" onKeyReleased="#filtrarRegistros" prefHeight="9.0" prefWidth="578.0" promptText="filtro de pesquisa" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0" />
+            <TableView fx:id="tableView" layoutX="31.0" layoutY="128.0" onMouseClicked="#clicarTabela" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="130.0" />
          </children>
       </AnchorPane>
    </children>
