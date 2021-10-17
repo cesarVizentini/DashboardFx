@@ -2,28 +2,35 @@ package com.gn.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Entity
-@Table(name="sevico")
+@Table(name="servico")
 public class Servico implements Serializable {
 
-    // mudar tipos String, hora e funcionario
+    // adicionar comboBox funcionario, cliente e recibo
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID", nullable = false)
     private Long ID;
+
     @Column(name = "descricao", nullable = false)
     private String descricao;
+
     @Column(name = "data", nullable = false)
-    private String data;
+    private LocalDate data;
+
     @Column(name = "hora", nullable = false)
-    private String hora;
+    private LocalTime hora;
+
     @Column(name = "funcionario", nullable = false)
     private String funcionario;
+
     @Column(name = "preco", nullable = false)
     private Double preco;
+
     @Column(name = "custo", nullable = false)
     private Double custo;
 
@@ -45,19 +52,19 @@ public class Servico implements Serializable {
         this.descricao = descricao;
     }
 
-    public String getData() {
+    public LocalDate getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(LocalDate data) {
         this.data = data;
     }
 
-    public String getHora() {
+    public LocalTime getHora() {
         return hora;
     }
 
-    public void setHora(String hora) {
+    public void setHora(LocalTime hora) {
         this.hora = hora;
     }
 

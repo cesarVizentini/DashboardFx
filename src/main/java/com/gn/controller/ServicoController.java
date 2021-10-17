@@ -1,11 +1,14 @@
 package com.gn.controller;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import com.gn.dao.CrudGenericoDAO;
 import com.gn.dao.ServicoDAO;
 import com.gn.model.Servico;
+import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,8 +18,10 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import jfxtras.scene.control.LocalTimeTextField;
 
 public class ServicoController implements Initializable, ICadastro {
+
 
     @FXML
     private Button btnNovo;
@@ -27,25 +32,23 @@ public class ServicoController implements Initializable, ICadastro {
     @FXML
     private TextField tfPesquisa;
     @FXML
-    private TextField tfID;
+    private JFXTextField tfID;
     @FXML
-    private TextField tfDescricao;
+    private JFXTextField tfDescricao;
     @FXML
-    private TextField tfFuncionario;
+    private JFXTextField tfFuncionario;
     @FXML
-    private TextField tfPreco;
+    private JFXTextField tfPreco;
     @FXML
-    private TextField tfHora;
+    public DatePicker dpData;
     @FXML
-    private TextField tfData;
+    public LocalTimeTextField tpHora;
     @FXML
-    private TextField tfCusto;
+    private JFXTextField tfCusto;
     @FXML
     private TableView<Servico> tableView;
-//    @FXML
-//    private Label lbTitulo;
 
-    private ServicoDAO dao = new ServicoDAO();
+    private CrudGenericoDAO<Servico> dao = new CrudGenericoDAO();
     private ObservableList<Servico> observableList = FXCollections.observableArrayList();
     private List<Servico> listaServicos;
     private Servico objetoSelecionado = new Servico();
@@ -65,16 +68,17 @@ public class ServicoController implements Initializable, ICadastro {
     public void salvarRegistro(ActionEvent actionEvent) {
         Servico servico = new Servico();
 
-        if (objetoSelecionado.getID() != null) {
+        if (objetoSelecionado != null) {
             servico.setID(objetoSelecionado.getID());
         }
 
         servico.setDescricao(tfDescricao.getText());
-        servico.setData(tfData.getText());
-        servico.setHora(tfHora.getText());
+        LocalDate data = dpData.getValue();
+        servico.setData(data);
+        servico.setHora(tpHora.getLocalTime().withSecond(0));
         servico.setFuncionario(tfFuncionario.getText());
-        servico.setPreco(tfPreco.getPrefWidth());
-        servico.setCusto(tfCusto.getPrefWidth());
+        servico.setPreco(Double.parseDouble(tfPreco.getText()));
+        servico.setCusto(Double.parseDouble(tfCusto.getText()));
 
         dao.salvar(servico);
 
@@ -118,7 +122,7 @@ public class ServicoController implements Initializable, ICadastro {
     @Override
     public void atualizarTabela() {
         observableList.clear();
-        listaServicos = dao.consultar(tfPesquisa.getText());
+        listaServicos = dao.consultar(tfPesquisa.getText(), "Servico");
 
         for (Servico s : listaServicos) {
             observableList.add(s);
@@ -134,8 +138,8 @@ public class ServicoController implements Initializable, ICadastro {
         objetoSelecionado = tableView.getItems().get(tableView.getSelectionModel().getSelectedIndex());
         tfID.setText(String.valueOf(objetoSelecionado.getID()));
         tfDescricao.setText(objetoSelecionado.getDescricao());
-        tfData.setText(objetoSelecionado.getData());
-        tfHora.setText(objetoSelecionado.getHora());
+        dpData.setValue(objetoSelecionado.getData());
+        tpHora.setLocalTime(objetoSelecionado.getHora());
         tfFuncionario.setText(objetoSelecionado.getFuncionario());
         tfPreco.setText(String.valueOf(objetoSelecionado.getPreco()));
         tfCusto.setText(String.valueOf(objetoSelecionado.getCusto()));
@@ -146,8 +150,8 @@ public class ServicoController implements Initializable, ICadastro {
         objetoSelecionado = null;
         tfID.clear();
         tfDescricao.clear();
-        tfData.clear();
-        tfHora.clear();
+        dpData.setValue(null);
+        tpHora.setLocalTime(null);
         tfFuncionario.clear();
         tfPreco.clear();
         tfCusto.clear();
@@ -164,8 +168,6 @@ public class ServicoController implements Initializable, ICadastro {
         setCamposFormulario();
     }
 
-    public void pesquisar(ActionEvent actionEvent) {
-
-    }
+    public void pesquisar(ActionEvent actionEvent) { }
 
 }

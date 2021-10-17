@@ -16,11 +16,18 @@
 
     <dependencies>
         <!-- JFOENIX -->
+        <!-- https://mvnrepository.com/artifact/com.jfoenix/jfoenix -->
         <dependency>
             <groupId>com.jfoenix</groupId>
             <artifactId>jfoenix</artifactId>
-            <version>1.4.0</version>
-            <scope>compile</scope>
+            <version>8.0.10</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jfxtras/jfxtras-all -->
+        <dependency>
+            <groupId>org.jfxtras</groupId>
+            <artifactId>jfxtras-all</artifactId>
+            <version>8.0-r6</version>
         </dependency>
 
         <!-- HIBERNATE -->

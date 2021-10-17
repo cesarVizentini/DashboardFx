@@ -71,8 +71,9 @@ public class Main implements Initializable {
     @FXML private TextField search;
     @FXML private ScrollPane scroll;
     @FXML private TitledPane design;
+    //##########################################################################################################################
     @FXML private TitledPane controls;
-    @FXML private TitledPane charts;
+//    @FXML private TitledPane charts;
     @FXML private Button home;
     @FXML private Button  about;
     @FXML private Button hamburger;
@@ -96,12 +97,12 @@ public class Main implements Initializable {
     private ObservableList<Button> items         = FXCollections.observableArrayList();
     private ObservableList<Button> designItems   = FXCollections.observableArrayList();
     private ObservableList<Button> controlsItems = FXCollections.observableArrayList();
-    private ObservableList<Button> chartsItems   = FXCollections.observableArrayList();
+//    private ObservableList<Button> chartsItems   = FXCollections.observableArrayList();
 
     private JFXDialog       dialog          = new JFXDialog();
     private JFXDialogLayout dialog_layout   = new JFXDialogLayout();
 
-    private String path = "/com/gn/theme/css/";
+    private String path = "/theme/css/";
     boolean scrolling   = false;
 
     private Parent popContent;
@@ -290,7 +291,7 @@ public class Main implements Initializable {
         scroll.setContent(views);
         ( (VBox) design.getContent()).getChildren().setAll(designItems);
         ( (VBox) controls.getContent()).getChildren().setAll(controlsItems);
-        ( (VBox) charts.getContent()).getChildren().setAll(chartsItems);
+//        ( (VBox) charts.getContent()).getChildren().setAll(chartsItems);
 
         views.getChildren().removeAll(home, about);
         views.getChildren().add(home);
@@ -340,15 +341,15 @@ public class Main implements Initializable {
             items.add((Button) node);
         }
 
-        for (Node node : ((VBox) design.getContent()).getChildren()) {
-            designItems.add((Button) node);
-            items.add((Button) node);
-        }
+//        for (Node node : ((VBox) design.getContent()).getChildren()) {
+//            designItems.add((Button) node);
+//            items.add((Button) node);
+//        }
 
-        for (Node node : ((VBox) charts.getContent()).getChildren()) {
-            chartsItems.add((Button) node);
-            items.add((Button) node);
-        }
+//        for (Node node : ((VBox) charts.getContent()).getChildren()) {
+//            chartsItems.add((Button) node);
+//            items.add((Button) node);
+//        }
     }
 
 
@@ -386,11 +387,11 @@ public class Main implements Initializable {
     }
 
 
-//    @FXML
-//    private void buttons() {
-//        body.setContent(ViewManager.getInstance().get("button"));
-//        title.setText("Button");
-//    }
+    @FXML
+    private void buttons() {
+        body.setContent(ViewManager.getInstance().get("button"));
+        title.setText("Button");
+    }
 
     // olhar o fxml
     @FXML

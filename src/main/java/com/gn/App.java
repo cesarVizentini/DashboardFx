@@ -71,54 +71,54 @@ public class App extends Application {
 
 //        load("jfoenix", "jfx-text-field");
 
-        load("designer", "cards");
-        load("designer", "banners");
-        load("designer", "carousel");
-        load("designer", "animated-button");
-        load("designer", "alerts");
+//        load("designer", "cards");
+//        load("designer", "banners");
+//        load("designer", "carousel");
+//        load("designer", "animated-button");
+//        load("designer", "alerts");
 
 //        load("controls", "button");
         load("controllerFXML", "servicoController");
 //        load("loader", "loader");
 
-        load("controls", "toggle");
-        load("controls", "textfield");
-        load("controls", "text-area");
-        load("controls", "datepicker");
-        load("controls", "checkbox");
-        load("controls", "radiobutton");
-        load("controls", "combobox");
-        load("controls", "choicebox");
-        load("controls", "splitmenubutton");
-        load("controls", "menubutton");
-        load("controls", "menubar");
-        load("controls", "colorpicker");
-        load("controls", "slider");
-        load("controls", "spinner");
-        load("controls", "progressbar");
-        load("controls", "progressindicator");
-        load("controls", "pagination");
+//        load("controls", "toggle");
+//        load("controls", "textfield");
+//        load("controls", "text-area");
+//        load("controls", "datepicker");
+//        load("controls", "checkbox");
+//        load("controls", "radiobutton");
+//        load("controls", "combobox");
+//        load("controls", "choicebox");
+//        load("controls", "splitmenubutton");
+//        load("controls", "menubutton");
+//        load("controls", "menubar");
+//        load("controls", "colorpicker");
+//        load("controls", "slider");
+//        load("controls", "spinner");
+//        load("controls", "progressbar");
+//        load("controls", "progressindicator");
+//        load("controls", "pagination");
 //        load("controls", "mediaview");
-        load("controls", "listview");
-        load("controls", "label");
-        load("controls", "hyperlink");
-        load("controls", "imageview");
-        load("controls", "tableview");
-        load("controls", "scrollbar");
-        load("controls", "passwordfield");
-        load("controls", "treeview");
-        load("controls", "treetableview");
+//        load("controls", "listview");
+//        load("controls", "label");
+//        load("controls", "hyperlink");
+//        load("controls", "imageview");
+//        load("controls", "tableview");
+//        load("controls", "scrollbar");
+//        load("controls", "passwordfield");
+//        load("controls", "treeview");
+//        load("controls", "treetableview");
 
         load("dashboard", "dashboard");
 
-        load("charts", "piechart");
-        load("charts", "areachart");
-        load("charts", "barchart");
-        load("charts", "bubblechart");
-        load("charts", "linechart");
-        load("charts", "stackedbarchart");
-        load("charts", "stackedareachart");
-        load("charts", "scatterchart");
+//        load("charts", "piechart");
+//        load("charts", "areachart");
+//        load("charts", "barchart");
+//        load("charts", "bubblechart");
+//        load("charts", "linechart");
+//        load("charts", "stackedbarchart");
+//        load("charts", "stackedareachart");
+//        load("charts", "scatterchart");
 
         load("main",     "main");
 
@@ -159,7 +159,7 @@ public class App extends Application {
 
     private void initialScene(){
 
-        decorator.setTitle("DashboardFx");
+        decorator.setTitle("Pet Shop");
 //        decorator.setIcon(null);
         decorator.addButton(ButtonType.FULL_EFFECT);
         decorator.initTheme(GNDecorator.Theme.DEFAULT);
