@@ -16,13 +16,14 @@
  */
 package com.gn.theme.skin;
 
+
 import com.sun.javafx.scene.control.skin.TextFieldSkin;
-import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.VPos;
 import javafx.scene.Cursor;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+//import javafx.scene.control.skin.TextFieldSkin;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;

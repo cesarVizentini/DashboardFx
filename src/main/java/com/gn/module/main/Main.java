@@ -401,6 +401,12 @@ public class Main implements Initializable {
     }
 
     @FXML
+    private void cliente() {
+        title.setText("Cliente");
+        body.setContent(ViewManager.getInstance().get("cadastro"));
+    }
+
+    @FXML
     private void carousel() {
         title.setText("Carousel");
         body.setContent(ViewManager.getInstance().get("carousel"));

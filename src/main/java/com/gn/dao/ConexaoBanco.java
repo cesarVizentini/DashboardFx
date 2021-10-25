@@ -1,5 +1,6 @@
 package com.gn.dao;
 
+import com.gn.model.Cliente;
 import com.gn.model.Servico;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -19,6 +20,7 @@ public class ConexaoBanco {
 
         // --> Indicando o mapeamento das classes
         configuracao.addPackage("com.gn.model").addAnnotatedClass(Servico.class);
+        configuracao.addPackage("com.gn.model").addAnnotatedClass(Cliente.class);
 
         // --> sessionFactory recebe a construcao da sessao de conexao com o banco de dados
         conexao = configuracao.buildSessionFactory();

@@ -79,6 +79,7 @@ public class App extends Application {
 
 //        load("controls", "button");
         load("controllerFXML", "servicoController");
+        load("controllerFXML", "cadastroCliente");
 //        load("loader", "loader");
 
 //        load("controls", "toggle");

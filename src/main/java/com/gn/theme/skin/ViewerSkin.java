@@ -69,7 +69,7 @@ public class ViewerSkin extends SkinAction {
             int n = txt.length();
             StringBuilder passwordBuilder = new StringBuilder(n);
             for (int i = 0; i < n; i++) {
-                passwordBuilder.append(BULLET);
+                passwordBuilder.append(passwordBuilder);
             }
             return passwordBuilder.toString();
         } else {

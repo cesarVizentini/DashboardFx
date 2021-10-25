@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -31,7 +30,6 @@
             <JFXTextField fx:id="tfPreco" labelFloat="true" layoutX="261.0" layoutY="172.0" prefHeight="25.0" prefWidth="171.0" promptText="Preco" />
             <JFXTextField fx:id="tfCusto" labelFloat="true" layoutX="502.0" layoutY="172.0" prefHeight="25.0" prefWidth="171.0" promptText="Custo" />
             <JFXTextField fx:id="tfDescricao" labelFloat="true" layoutX="20.0" layoutY="78.0" prefHeight="25.0" prefWidth="655.0" promptText="Descricao" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-            <JFXDatePicker layoutX="284.0" layoutY="37.0" promptText="Data" />
             <LocalTimeTextField fx:id="tpHora" layoutX="502.0" layoutY="124.0" prefHeight="25.0" prefWidth="171.0" promptText="Hora" />
             <DatePicker fx:id="dpData" layoutX="262.0" layoutY="124.0" prefHeight="25.0" prefWidth="171.0" />
          </children></AnchorPane>
