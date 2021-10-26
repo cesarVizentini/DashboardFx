@@ -72,7 +72,7 @@ public class Loader extends Preloader {
             double x = ((Preloader.ProgressNotification) info).getProgress();
 
             double percent = x / 100f;
-            progressBar.progressProperty().set(percent > 1 ? 1 : percent);
+//            progressBar.progressProperty().set(percent > 1 ? 1 : percent);
         }
     }
 

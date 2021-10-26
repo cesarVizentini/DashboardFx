@@ -341,10 +341,10 @@ public class Main implements Initializable {
             items.add((Button) node);
         }
 
-//        for (Node node : ((VBox) design.getContent()).getChildren()) {
-//            designItems.add((Button) node);
-//            items.add((Button) node);
-//        }
+        for (Node node : ((VBox) design.getContent()).getChildren()) {
+            designItems.add((Button) node);
+            items.add((Button) node);
+        }
 
 //        for (Node node : ((VBox) charts.getContent()).getChildren()) {
 //            chartsItems.add((Button) node);
@@ -403,7 +403,7 @@ public class Main implements Initializable {
     @FXML
     private void cliente() {
         title.setText("Cliente");
-        body.setContent(ViewManager.getInstance().get("cadastro"));
+        body.setContent(ViewManager.getInstance().get("cadastroCliente"));
     }
 
     @FXML
