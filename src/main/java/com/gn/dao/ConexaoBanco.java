@@ -16,7 +16,7 @@ public class ConexaoBanco {
 
         // --> Configurando usuario e senha para acesso ao banco de dados
         configuracao.setProperty("hibernate.connection.username", "root");
-        configuracao.setProperty("hibernate.connection.password", "qwe123QWE!@#");
+        configuracao.setProperty("hibernate.connection.password", "123456");
 
         // --> Indicando o mapeamento das classes
         configuracao.addPackage("com.gn.model").addAnnotatedClass(Servico.class);
