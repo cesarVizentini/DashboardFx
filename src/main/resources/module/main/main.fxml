@@ -85,7 +85,9 @@
                            <!-- servico com id controls -->
                             <TitledPane fx:id="controls" alignment="BASELINE_RIGHT" contentDisplay="RIGHT" graphicTextGap="20.0" layoutX="10.0" layoutY="80.0" nodeOrientation="RIGHT_TO_LEFT" styleClass="drawer-menu" text="Serviços">
                                 <VBox>
-                                    <Button nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#servico" prefWidth="250" styleClass="drawer-item" text="Serviço" />
+                                   <Button nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#servico" prefWidth="250" styleClass="drawer-item" text="Serviço" />
+                                   <Button nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#funcionario" prefWidth="250" styleClass="drawer-item" text="Funcionario" />
+                                   <Button nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#produto" prefWidth="250" styleClass="drawer-item" text="Produto" />
                                 </VBox>
                                 <graphic>
                                     <SVGPath content="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm10 6c3.31 0 6-2.69 6-6s-2.69-6-6-6-6 2.69-6 6 2.69 6 6 6z" styleClass="icon" />

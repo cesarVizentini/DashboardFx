@@ -25,6 +25,7 @@ public class Servico implements Serializable {
     @Column(name = "hora", nullable = false)
     private LocalTime hora;
 
+    //    @OneToOne, mudar pra id
     @Column(name = "funcionario", nullable = false)
     private String funcionario;
 
@@ -68,14 +69,6 @@ public class Servico implements Serializable {
         this.hora = hora;
     }
 
-    public String getFuncionario() {
-        return funcionario;
-    }
-
-    public void setFuncionario(String funcionario) {
-        this.funcionario = funcionario;
-    }
-
     public Double getPreco() {
         return preco;
     }
@@ -86,6 +79,14 @@ public class Servico implements Serializable {
 
     public Double getCusto() {
         return custo;
+    }
+
+    public String getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(String funcionario) {
+        this.funcionario = funcionario;
     }
 
     public void setCusto(Double custo) {

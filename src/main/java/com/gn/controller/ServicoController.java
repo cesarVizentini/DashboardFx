@@ -7,7 +7,9 @@ import java.util.ResourceBundle;
 
 import com.gn.dao.CrudGenericoDAO;
 import com.gn.dao.ServicoDAO;
+import com.gn.model.Funcionario;
 import com.gn.model.Servico;
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -35,8 +37,10 @@ public class ServicoController implements Initializable, ICadastro {
     private JFXTextField tfID;
     @FXML
     private JFXTextField tfDescricao;
+//    @FXML
+//    private JFXTextField tfFuncionario;
     @FXML
-    private JFXTextField tfFuncionario;
+    private JFXComboBox<Funcionario> tfFuncionario;
     @FXML
     private JFXTextField tfPreco;
     @FXML
@@ -55,6 +59,7 @@ public class ServicoController implements Initializable, ICadastro {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        tfFuncionario.setItems(dao.comboBox());
         criarColunasTabela();
         atualizarTabela();
     }
@@ -76,7 +81,7 @@ public class ServicoController implements Initializable, ICadastro {
         LocalDate data = dpData.getValue();
         servico.setData(data);
         servico.setHora(tpHora.getLocalTime().withSecond(0));
-        servico.setFuncionario(tfFuncionario.getText());
+        servico.setFuncionario(tfFuncionario.getValue().getNome());
         servico.setPreco(Double.parseDouble(tfPreco.getText()));
         servico.setCusto(Double.parseDouble(tfCusto.getText()));
 
@@ -140,7 +145,7 @@ public class ServicoController implements Initializable, ICadastro {
         tfDescricao.setText(objetoSelecionado.getDescricao());
         dpData.setValue(objetoSelecionado.getData());
         tpHora.setLocalTime(objetoSelecionado.getHora());
-        tfFuncionario.setText(objetoSelecionado.getFuncionario());
+//        tfFuncionario.setText(objetoSelecionado.getFuncionario());
         tfPreco.setText(String.valueOf(objetoSelecionado.getPreco()));
         tfCusto.setText(String.valueOf(objetoSelecionado.getCusto()));
     }
@@ -152,7 +157,7 @@ public class ServicoController implements Initializable, ICadastro {
         tfDescricao.clear();
         dpData.setValue(null);
         tpHora.setLocalTime(null);
-        tfFuncionario.clear();
+//        tfFuncionario.clear();
         tfPreco.clear();
         tfCusto.clear();
         tfDescricao.requestFocus();

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -26,12 +27,13 @@
       <AnchorPane fx:id="tfid" layoutX="26.0" layoutY="50.0" prefHeight="233.0" prefWidth="693.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
          <children>
             <JFXTextField fx:id="tfID" disable="true" editable="false" labelFloat="true" layoutX="39.0" layoutY="24.0" promptText="id" AnchorPane.leftAnchor="20.0" />
-            <JFXTextField fx:id="tfFuncionario" labelFloat="true" layoutX="20.0" layoutY="124.0" promptText="Funcionario" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="124.0" />
+<!--            <JFXTextField fx:id="tfFuncionario" labelFloat="true" layoutX="20.0" layoutY="124.0" promptText="Funcionario" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="124.0" />-->
             <JFXTextField fx:id="tfPreco" labelFloat="true" layoutX="261.0" layoutY="172.0" prefHeight="25.0" prefWidth="171.0" promptText="Preco" />
             <JFXTextField fx:id="tfCusto" labelFloat="true" layoutX="502.0" layoutY="172.0" prefHeight="25.0" prefWidth="171.0" promptText="Custo" />
             <JFXTextField fx:id="tfDescricao" labelFloat="true" layoutX="20.0" layoutY="78.0" prefHeight="25.0" prefWidth="655.0" promptText="Descricao" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
             <LocalTimeTextField fx:id="tpHora" layoutX="502.0" layoutY="124.0" prefHeight="25.0" prefWidth="171.0" promptText="Hora" />
             <DatePicker fx:id="dpData" layoutX="262.0" layoutY="124.0" prefHeight="25.0" prefWidth="171.0" />
+            <JFXComboBox fx:id="tfFuncionario" layoutX="20.0" layoutY="124.0" prefHeight="25.0" prefWidth="135.0" promptText="Funcionário" />
          </children></AnchorPane>
       <AnchorPane layoutX="269.0" layoutY="283.0" prefHeight="286.0" prefWidth="693.0" style="-fx-background-color: #008b8b; -fx-border-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="283.0">
          <children>

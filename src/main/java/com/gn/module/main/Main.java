@@ -401,6 +401,18 @@ public class Main implements Initializable {
     }
 
     @FXML
+    private void funcionario() {
+        title.setText("Funcionario");
+        body.setContent(ViewManager.getInstance().get("funcionarioController"));
+    }
+
+    @FXML
+    private void produto() {
+        title.setText("Produto");
+        body.setContent(ViewManager.getInstance().get("produtoController"));
+    }
+
+    @FXML
     private void cliente() {
         title.setText("Cliente");
         body.setContent(ViewManager.getInstance().get("cadastroCliente"));

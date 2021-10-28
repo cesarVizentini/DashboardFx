@@ -79,6 +79,8 @@ public class App extends Application {
 
 //        load("controls", "button");
         load("controllerFXML", "servicoController");
+        load("controllerFXML", "funcionarioController");
+        load("controllerFXML", "produtoController");
         load("controllerFXML", "cadastroCliente");
 //        load("loader", "loader");
 
