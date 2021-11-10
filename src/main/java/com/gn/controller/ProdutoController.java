@@ -1,7 +1,6 @@
 package com.gn.controller;
 
 import com.gn.dao.CrudGenericoDAO;
-import com.gn.model.Funcionario;
 import com.gn.model.Produto;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;

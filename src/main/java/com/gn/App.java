@@ -81,6 +81,7 @@ public class App extends Application {
         load("controllerFXML", "servicoController");
         load("controllerFXML", "funcionarioController");
         load("controllerFXML", "produtoController");
+        load("controllerFXML", "pedidoController");
         load("controllerFXML", "cadastroCliente");
 //        load("loader", "loader");
 

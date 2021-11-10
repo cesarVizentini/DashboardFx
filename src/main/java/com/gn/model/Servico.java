@@ -25,9 +25,9 @@ public class Servico implements Serializable {
     @Column(name = "hora", nullable = false)
     private LocalTime hora;
 
-    //    @OneToOne, mudar pra id
-    @Column(name = "funcionario", nullable = false)
-    private String funcionario;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "funcionario_id", referencedColumnName = "ID")
+    private Funcionario funcionario;
 
     @Column(name = "preco", nullable = false)
     private Double preco;
@@ -81,11 +81,11 @@ public class Servico implements Serializable {
         return custo;
     }
 
-    public String getFuncionario() {
+    public Funcionario getFuncionario() {
         return funcionario;
     }
 
-    public void setFuncionario(String funcionario) {
+    public void setFuncionario(Funcionario funcionario) {
         this.funcionario = funcionario;
     }
 

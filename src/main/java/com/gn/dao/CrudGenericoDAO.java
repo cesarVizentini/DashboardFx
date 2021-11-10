@@ -1,6 +1,7 @@
 package com.gn.dao;
 
 import com.gn.model.Funcionario;
+import com.gn.model.Produto;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.hibernate.Session;
@@ -9,8 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CrudGenericoDAO<Classe> {
-
-    private ObservableList<Funcionario> observableList = FXCollections.observableArrayList();
 
     public boolean salvar(Classe classe) {
         try {
@@ -55,20 +54,6 @@ public class CrudGenericoDAO<Classe> {
         } catch (Exception erro) {
             System.out.println("Ocorreou o erro: " + erro);
         }
-    }
-
-    public ObservableList<Funcionario> comboBox() {
-        List<Funcionario> lista = new ArrayList<>();
-        Session session = ConexaoBanco.getSessionFactory().openSession();
-        session.beginTransaction();
-        lista = session.createQuery(" from Funcionario ").getResultList();
-        session.getTransaction().commit();
-        session.close();
-
-        for (Funcionario funcionario : lista) {
-            observableList.add(funcionario);
-        }
-        return observableList;
     }
 
 }

@@ -36,6 +36,11 @@ public class Cliente implements Serializable{
         this.nome = Nome;
     }
 
+    @Override
+    public String toString() {
+        return nome;
+    }
+
     public String getCPF() {
         return cpf;
     }

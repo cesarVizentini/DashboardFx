@@ -75,6 +75,7 @@ public class Main implements Initializable {
     @FXML private TitledPane controls;
 //    @FXML private TitledPane charts;
     @FXML private Button home;
+    @FXML private Button pedido;
     @FXML private Button  about;
     @FXML private Button hamburger;
     @FXML private SVGPath searchIcon;
@@ -293,21 +294,25 @@ public class Main implements Initializable {
         ( (VBox) controls.getContent()).getChildren().setAll(controlsItems);
 //        ( (VBox) charts.getContent()).getChildren().setAll(chartsItems);
 
-        views.getChildren().removeAll(home, about);
+        views.getChildren().removeAll(home, pedido, about);
         views.getChildren().add(home);
+        views.getChildren().add(pedido);
         views.getChildren().add(about);
         home.setContentDisplay(ContentDisplay.LEFT);
+        pedido.setContentDisplay(ContentDisplay.LEFT);
         about.setContentDisplay(ContentDisplay.LEFT);
         home.setAlignment(Pos.CENTER_LEFT);
+        pedido.setAlignment(Pos.CENTER_LEFT);
         about.setAlignment(Pos.CENTER_LEFT);
 
         home.toBack();
+        //##############
         about.toFront();
         hamburger.setMouseTransparent(false);
     }
 
     private void barFiltered(String filter){
-        views.getChildren().removeAll(home, about);
+        views.getChildren().removeAll(home, pedido, about);
         filteredList.setPredicate(s -> s.getText().toUpperCase().contains(filter.toUpperCase()));
         scroll.setContent(filter(filteredList));
 
@@ -416,6 +421,12 @@ public class Main implements Initializable {
     private void cliente() {
         title.setText("Cliente");
         body.setContent(ViewManager.getInstance().get("cadastroCliente"));
+    }
+
+    @FXML
+    private void pedido() {
+        title.setText("Pedido");
+        body.setContent(ViewManager.getInstance().get("pedidoController"));
     }
 
     @FXML

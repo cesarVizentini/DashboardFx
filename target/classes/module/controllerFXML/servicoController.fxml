@@ -33,7 +33,7 @@
             <JFXTextField fx:id="tfDescricao" labelFloat="true" layoutX="20.0" layoutY="78.0" prefHeight="25.0" prefWidth="655.0" promptText="Descricao" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
             <LocalTimeTextField fx:id="tpHora" layoutX="502.0" layoutY="124.0" prefHeight="25.0" prefWidth="171.0" promptText="Hora" />
             <DatePicker fx:id="dpData" layoutX="262.0" layoutY="124.0" prefHeight="25.0" prefWidth="171.0" />
-            <JFXComboBox fx:id="tfFuncionario" layoutX="20.0" layoutY="124.0" prefHeight="25.0" prefWidth="135.0" promptText="Funcionário" />
+            <JFXComboBox fx:id="cboxFuncionario" layoutX="20.0" layoutY="124.0" prefHeight="25.0" prefWidth="135.0" promptText="Funcionário" />
          </children></AnchorPane>
       <AnchorPane layoutX="269.0" layoutY="283.0" prefHeight="286.0" prefWidth="693.0" style="-fx-background-color: #008b8b; -fx-border-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="283.0">
          <children>

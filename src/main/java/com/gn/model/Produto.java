@@ -22,6 +22,10 @@ public class Produto {
     @Column(name = "custo", nullable = false)
     private Double custo;
 
+    @ManyToOne
+    @JoinColumn(name="pedido_id", nullable = true)
+    private Pedido pedido;
+
     public Produto() {
     }
 
@@ -47,6 +51,11 @@ public class Produto {
 
     public void setPreco(Double preco) {
         this.preco = preco;
+    }
+
+    @Override
+    public String toString() {
+        return nome;
     }
 
     public Double getCusto() {

@@ -161,7 +161,9 @@ public class FuncionarioController implements Initializable, ICadastro {
         tfTelefone.clear();
         tfSalario.clear();
         // decelecionar checkbox
+        ckVeterinario.setSelected(false);
         tfCRMV.clear();
+        tfCRMV.setDisable(true);
         tfNome.requestFocus();
     }
 
